@@ -30,7 +30,6 @@
   critical: false
   expanded: true
   packages:
-   - vlc
    - handbrake
    - mpd
    - ncmpcpp
