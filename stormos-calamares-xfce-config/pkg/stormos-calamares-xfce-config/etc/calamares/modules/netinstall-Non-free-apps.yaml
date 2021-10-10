@@ -30,8 +30,21 @@
   critical: false
   expanded: true
   packages:
+   - vlc
    - handbrake
    - mpd
    - ncmpcpp
    - pianobar
    - mpv
+- name: "Kernels"
+  description: "different kernels"
+  hidden: false
+  selected: false
+  critical: false
+  expanded: true
+  packages:
+   - linux-zen
+   - linux-zen-headers
+   - linux-lts
+   - linux-lts-headers
+   - nvidia-lts
