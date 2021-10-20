@@ -2,12 +2,12 @@
 # using fakeroot version 1.26
 pkgname = stormos-calamares-kde-config
 pkgbase = stormos-calamares-kde-config
-pkgver = 3.2.44.3-2
+pkgver = 3.2.44.3-3
 pkgdesc = StormOS KDE - Calamares Config
 url = https://github.com/bfitzgit23
-builddate = 1633836594
+builddate = 1634764675
 packager = Unknown Packager
-size = 3795685
+size = 3795683
 arch = any
 license = GPL3
 conflict = calamares-xfce-config
