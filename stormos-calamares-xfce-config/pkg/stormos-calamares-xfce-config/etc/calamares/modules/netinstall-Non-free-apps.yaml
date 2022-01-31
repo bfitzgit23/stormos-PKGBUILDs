@@ -11,17 +11,20 @@
    - steam-native-runtime
    - teamviewer
    - telegram-desktop
-- name: "nvidia-drivers"
-  description: "nvidia gpu drivers"
+   - proton-ge-custom-bin
+   - protonup-git
+   - dxvk-mingw-proton-ge-async-git
+- name: "optimus apps"
+  description: "nvidia optimus"
   hidden: false
   selected: false
   critical: false
   expanded: true
   packages:
-    - nvidia
-    - nvidia-dkms
-    - nvidia-utils
-    - lib32-nvidia-utils
+    - bumblebee
+    - bbswitch
+    - virtualgl
+    - lib32-virtualgl
     - optimus-manager
     - optimus-manager-qt
 - name: "Kernels"
