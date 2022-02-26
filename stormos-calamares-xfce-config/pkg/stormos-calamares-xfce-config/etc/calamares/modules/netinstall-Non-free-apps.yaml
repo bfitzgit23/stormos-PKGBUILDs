@@ -11,9 +11,7 @@
    - steam-native-runtime
    - teamviewer
    - telegram-desktop
-   - proton-ge-custom-bin
    - protonup-git
-   - dxvk-mingw-proton-ge-async-git
 - name: "optimus apps"
   description: "nvidia optimus"
   hidden: false
