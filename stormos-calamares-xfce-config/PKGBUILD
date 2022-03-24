@@ -1,6 +1,6 @@
 pkgname=stormos-calamares-xfce-config
 _destname1="/etc"
-pkgver=3.2.53
+pkgver=3.2.54
 pkgrel=6
 pkgdesc="StormOS XFCE - Calamares Config"
 arch=('any')
