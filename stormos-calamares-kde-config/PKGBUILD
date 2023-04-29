@@ -1,14 +1,14 @@
-pkgname=stormos-calamares-xfce-config
+pkgname=stormos-calamares-kde-config
 _destname1="/etc"
 pkgver=3.2.62
 pkgrel=1
-pkgdesc="StormOS XFCE - Calamares Config"
+pkgdesc="StormOS KDE - Calamares Config"
 arch=('any')
 url="https://github.com/bfitzgit23"
 license=('GPL3')
 makedepends=('git')
 depends=()
-conflicts=('calamares-kde-config' 'calamares-net-config')
+conflicts=('calamares-xfce-config' 'calamares-net-config')
 provides=("${pkgname}")
 options=(!strip !emptydirs)
 source=(${pkgname}::"git+${url}/${pkgname}")
