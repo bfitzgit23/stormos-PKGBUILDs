@@ -1,6 +1,6 @@
 pkgname=stormos-calamares-kde-config
 _destname1="/etc"
-pkgver=3.2.62
+pkgver=3.3.0.230305
 pkgrel=1
 pkgdesc="StormOS KDE - Calamares Config"
 arch=('any')
