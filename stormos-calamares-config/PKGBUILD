@@ -1,7 +1,7 @@
 pkgname=stormos-calamares-config
 _destname1="/etc"
-pkgver=3.3.9
-pkgrel=2
+pkgver=3.3.10
+pkgrel=1
 pkgdesc="StormOS - Calamares Config"
 arch=('any')
 url="https://github.com/bfitzgit23"
