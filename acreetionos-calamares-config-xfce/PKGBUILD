@@ -1,4 +1,4 @@
-pkgname=acreetionos-xfce-calamares-config
+pkgname=acreetionos-calamares-config-xfce
 _destname1="/etc"
 pkgver=3.3.13
 pkgrel=1
