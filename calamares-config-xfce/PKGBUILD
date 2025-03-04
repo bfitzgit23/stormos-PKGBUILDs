@@ -1,8 +1,9 @@
-pkgname=acreetionos-calamares-config-xfce
+pkgname=calamares-config-xfce
 _destname1="/etc"
+_destname2="/usr/local/bin"
 pkgver=3.3.13
-pkgrel=1
-pkgdesc="AcreetionOS-XFCE - Calamares Config"
+pkgrel=2
+pkgdesc="Calamares Config XFCE"
 arch=('any')
 url="https://github.com/bfitzgit23"
 license=('GPL3')
@@ -16,4 +17,7 @@ sha256sums=('SKIP')
 package() {
 	install -dm755 ${pkgdir}${_destname1}
 	cp -r ${srcdir}/${pkgname}${_destname1}/* ${pkgdir}${_destname1}
+        install -dm755 ${pkgdir}${_destname2}
+#        cp -r ${srcdir}/${pkgname}${_destname2}/* ${pkgdir}${_destname2}
+#        chmod +x ${pkgdir}${_destname2}/*
 }
