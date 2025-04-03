@@ -1,7 +1,7 @@
 pkgname=calamares-config-xfce
 _destname1="/etc"
 _destname2="/usr/local/bin"
-pkgver=3.3.13
+pkgver=3.3.14
 pkgrel=2
 pkgdesc="Calamares Config XFCE"
 arch=('any')
