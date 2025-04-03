@@ -1,12 +1,12 @@
 
 #Maintainer: silent robot (d3signr@gmail.com)
 
-pkgname=acreetionos-xfce-grub-theme
-thmname=acreetionos-xfce
+pkgname=stormos-grub-theme
+thmname=stormos
 destname='/usr/share/grub/themes/'
 pkgver=1.0
 pkgrel=1
-pkgdesc='AcreetionOS-XFCE - Grub Theme'
+pkgdesc='StormOS - Grub Theme'
 arch=('any')
 url='https://github.com/bfitzgit23/'
 license=('GPL3')
