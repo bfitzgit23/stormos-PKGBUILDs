@@ -1,7 +1,7 @@
 
 #Maintainer: silent robot (d3signr@gmail.com)
 
-pkgname=stormos-xfce-grub-theme
+pkgname=stormos-grub-theme
 thmname=stormos
 destname='/usr/share/grub/themes/'
 pkgver=1.0
