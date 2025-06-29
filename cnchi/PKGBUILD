@@ -1,0 +1,80 @@
+# Maintainer: Your Name <your@email.com>
+pkgname=cnchi
+_pkgname=cnchi
+pkgver=20180427
+pkgrel=1
+pkgdesc="CNCHI Installer forked from RebornOS for Arch-based systems"
+arch=('any')
+url="https://github.com/bfitzgit23/cnchi"
+license=('GPL3')
+depends=(
+    'python'
+    'python-gobject'
+    'gtk3'
+    'webkit2gtk'
+    'libpeas'
+    'python-cairo'
+    'python-dbus'
+    'python-setuptools'
+    'python-pip'
+)
+makedepends=('git')
+source=("git+https://github.com/bfitzgit23/cnchi.git")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd "$srcdir/$_pkgname"
+  git log -1 --format=%cd --date=short | sed 's/-//g'
+}
+
+build() {
+  cd "$srcdir/$_pkgname"
+  # Nothing to build — it's a shell/python script-based installer
+  echo "Build step complete (no actual build needed)"
+}
+
+package() {
+  cd "$srcdir/$_pkgname"
+
+  # Create required directories
+  install -d "$pkgdir/usr/bin"
+  install -d "$pkgdir/usr/share/cnchi"
+  install -d "$pkgdir/usr/share/applications"
+  install -d "$pkgdir/usr/share/icons/hicolor/256x256/apps"
+  install -d "$pkgdir/etc/cnchi"
+
+  # Install main cnchi script
+  if [ -f "cnchi" ]; then
+    install -Dm755 cnchi "$pkgdir/usr/bin/cnchi"
+  elif [ -d "cnchi" ]; then
+    cp -r cnchi "$pkgdir/usr/bin/"
+  else
+    echo "Error: 'cnchi' not found as file or directory"
+    exit 1
+  fi
+
+  # Install data files
+  if [ -d "data" ]; then
+    cp -r data/* "$pkgdir/usr/share/cnchi/"
+  fi
+
+  # Install desktop entry
+  if [ -f "data/cnchi.desktop" ]; then
+    install -Dm644 data/cnchi.desktop "$pkgdir/usr/share/applications/cnchi.desktop"
+  fi
+
+  # Install icon
+  if [ -f "data/icons/cnchi.png" ]; then
+    cp data/icons/cnchi.png "$pkgdir/usr/share/icons/hicolor/256x256/apps/cnchi.png"
+  fi
+
+  # Install configs
+  if [ -d "data/configs" ]; then
+    cp -r data/configs/* "$pkgdir/etc/cnchi/"
+  fi
+
+  # Optional: Install locale files
+  if [ -d "po" ]; then
+    cp -r po "$pkgdir/usr/share/locale/"
+  fi
+}
