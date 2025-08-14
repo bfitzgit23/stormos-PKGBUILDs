@@ -1,7 +1,7 @@
 pkgname=calamares-config-kde
 _destname1="/etc"
 _destname2="/usr/local/bin"
-pkgver=3.3.15
+pkgver=3.4.0
 pkgrel=1
 pkgdesc="Calamares Config KDE"
 arch=('any')
